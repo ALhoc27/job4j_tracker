@@ -7,9 +7,11 @@ public class Broken {
     private String name;
     public static final String NEWVALUE = "";
 
-    public void echo() { }
+    public void broken() {
 
-    public void broken() { }
+    }
+
+    public void echo() { }
 
     public void media(Object obj) {
         if (obj != null) {

@@ -8,7 +8,6 @@ public class Broken {
     public static final String NEWVALUE = "";
 
     public void broken() {
-
     }
 
     public void echo() { }

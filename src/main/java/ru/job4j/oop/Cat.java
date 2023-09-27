@@ -19,7 +19,7 @@ public class Cat {
         return voice;
     }
 
-    void giveNick(String nick) {
+    public void giveNick(String nick) {
         name = nick;
     }
 

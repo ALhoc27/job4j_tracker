@@ -14,15 +14,7 @@ public class Error {
 
     @Override
     public String toString() {
-        return "Error{"
-                + "active="
-                + active
-                + ", status="
-                + status
-                + ", message='"
-                + message
-                + '\''
-                + '}';
+        return "Error{" + "active=" + active + ", status=" + status + ", message='" + message + '\'' + '}';
     }
 
     public Error() { }

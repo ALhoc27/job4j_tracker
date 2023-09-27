@@ -20,7 +20,5 @@ public class Student {
             petya.music(song);
         }
 
-        Jukebox jukeboxNew = new Jukebox();
-        jukeboxNew.music(1);
     }
 }

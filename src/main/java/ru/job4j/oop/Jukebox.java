@@ -10,4 +10,9 @@ public class Jukebox {
         };
         System.out.println(result);
     }
+
+    public static void main(String[] args) {
+        Jukebox jukeboxNew = new Jukebox();
+        jukeboxNew.music(1);
+    }
 }

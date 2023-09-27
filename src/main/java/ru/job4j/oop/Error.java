@@ -12,16 +12,12 @@ public class Error {
         this.message = message;
     }
 
-   /* public Error(String message) {
-        this.message = message;
-    }*/
+    public Error() { }
 
     @Override
     public String toString() {
         return "Error{" + "active=" + active + ", status=" + status + ", message='" + message + '\'' + '}';
     }
-
-    public Error() { }
 
     public boolean isActive() {
         return active;

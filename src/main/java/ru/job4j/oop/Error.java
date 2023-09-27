@@ -12,6 +12,10 @@ public class Error {
         this.message = message;
     }
 
+   /* public Error(String message) {
+        this.message = message;
+    }*/
+
     @Override
     public String toString() {
         return "Error{" + "active=" + active + ", status=" + status + ", message='" + message + '\'' + '}';
@@ -47,14 +51,14 @@ public class Error {
         Error errorWithoutArguments = new Error();
         Error errorWithArguments = new Error(true, 12, "String");
 
+        System.out.println(errorWithArguments);
         errorWithArguments.setMessage("falseee");
-        errorWithArguments.toString();
-        System.out.println(errorWithArguments.getMessage());
+        System.out.println(errorWithArguments);
 
-        errorWithoutArguments.toString();
+        System.out.println(errorWithoutArguments);
         errorWithoutArguments.setMessage("Кукушка");
         errorWithoutArguments.setStatus(4);
         errorWithoutArguments.setActive(true);
-        errorWithoutArguments.toString();
+        System.out.println(errorWithoutArguments);
     }
 }

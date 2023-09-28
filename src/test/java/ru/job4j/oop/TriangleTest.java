@@ -17,4 +17,15 @@ public class TriangleTest {
         double expected = 8;
         assertThat(rsl).isCloseTo(expected, offset(0.001));
     }
+
+    @Test
+    public void when006and403and044Then10Dot769() {
+        Point a = new Point(0, 0, 6);
+        Point b = new Point(4, 0, 3);
+        Point c = new Point(0, 4, 4);
+        Triangle triangle = new Triangle(a, b, c);
+        double rsl = triangle.areaz();
+        double expected = 10.769D;
+        assertThat(rsl).isCloseTo(expected, offset(0.002));
+    }
 }

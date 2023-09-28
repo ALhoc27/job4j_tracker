@@ -7,6 +7,7 @@ public class Triangle {
     private Point first;
     private Point second;
     private Point third;
+    double rsl = -1;
 
     public Triangle(Point ap, Point bp, Point cp) {
     /*  firstDistSecond = ap.distance(bp);
@@ -18,7 +19,7 @@ public class Triangle {
     }
 
     public double semiPerimeter(double ab, double bc, double ac) {
-        return (ab + ab + ac) / 2;
+        return (ab + bc + ac) / 2;
     }
 
     public boolean exist(double ab, double ac, double bc) {
@@ -26,7 +27,7 @@ public class Triangle {
     }
 
     public double area() {
-        double rsl = -1;
+        rsl = -1;
         double ab = first.distance(second);
         double ac = first.distance(third);
         double bc = second.distance(third);
@@ -36,12 +37,24 @@ public class Triangle {
             rsl = Math.sqrt(p * (p - ab) * (p - ac) * (p - bc));
         }
         return rsl;
+    }
+
+    public double areaz() {
+        rsl = -1;
+        double abz = first.distance3d(second);
+        double acz = first.distance3d(third);
+        double bcz = second.distance3d(third);
+
+        if (this.exist(abz, acz, bcz)) {
+            double p = semiPerimeter(abz, acz, bcz);
+            rsl = Math.sqrt(p * (p - abz) * (p - acz) * (p - bcz));
+        }
+        return rsl;
+    }
 
 /*        if (this.exist(firstDistSecond, firstDistThird, secondDistThird)) {
             double p = semiPerimeter(firstDistSecond, firstDistThird, secondDistThird);
             rsl = Math.sqrt(p * (p - firstDistSecond) * (p - secondDistThird) * (p - firstDistThird));
         }
         return rsl;*/
-
-    }
 }

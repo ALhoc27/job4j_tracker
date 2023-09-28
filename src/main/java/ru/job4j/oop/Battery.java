@@ -12,10 +12,12 @@ public class Battery {
     }
 
     public void exchange(Battery another) {
-        while (this.load > 0 && another.load <= 100) {
+/*        while (this.load > 0 && another.load <= 100) {
             this.load--;
             another.load++;
-        }
+        }*/
+    another.load += this.load;
+    this.load = 0;
     }
 
     public static void main(String[] args) {

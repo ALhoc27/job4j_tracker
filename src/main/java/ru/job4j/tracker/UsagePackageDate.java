@@ -8,17 +8,17 @@ import java.time.format.DateTimeFormatter;
 public class UsagePackageDate {
     public static void main(String[] args) {
         LocalDate currentDate = LocalDate.now();
-        System.out.println("Текущая дата: " + currentDate); // Текущая дата: 2023-12-15
+        System.out.println("Текущая дата: " + currentDate);
 
         LocalTime currentTime = LocalTime.now();
-        System.out.println("Текущее время: " + currentTime); // Текущее время: 05:59:58.261725
+        System.out.println("Текущее время: " + currentTime);
 
         LocalDateTime currentDateTime = LocalDateTime.now();
-        System.out.println("Текущее дата и время: " + currentDateTime); // Текущее дата и время: 2023-12-15T05:59:58.261822
+        System.out.println("Текущее дата и время: " + currentDateTime);
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         String currentDateTimeFormat = currentDateTime.format(formatter);
-        System.out.println("Текущее дата и время: " + currentDateTimeFormat); // Текущее дата и время: 15-12-2023 05:59:58
+        System.out.println("Текущее дата и время: " + currentDateTimeFormat);
 
     }
 }

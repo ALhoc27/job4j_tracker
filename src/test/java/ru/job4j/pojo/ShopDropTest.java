@@ -9,11 +9,16 @@ import static org.junit.jupiter.api.Assertions.*;
 class ShopDropTest {
     @Test
     public void whenDropFirst() {
-        Product[] products = new Product[2];
+        Product[] products = new Product[4];
         products[0] = new Product("Milk", 10);
         products[1] = new Product("Bread", 4);
-        Product[] result = ShopDrop.delete1(products, 0);
-        assertThat(result[0].getName()).isEqualTo("Bread");
+        products[2] = null;
+        products[3] = null;
+        System.out.println(products.length);
+        int index = 0;
+        Product[] result = ShopDrop.delete1(products, index);
+        System.out.println(products.length);
+        assertThat(result[index].getName()).isEqualTo("Bread");
         assertThat(result[1]).isNull();
     }
 

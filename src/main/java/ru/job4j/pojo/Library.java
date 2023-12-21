@@ -13,31 +13,31 @@ public class Library {
         printBookWithFilter(books, "поиск 'Clean code'");
     }
 
-    static public void printBookWithFilter(Book[] a, String nameFilterField) {
-        System.out.println("Массив книг (c фильтром по " + nameFilterField + "): " + a);
-        for (int i = 0; i < a.length; i++) {
-            if (a[i].getBookTitle().equals("Clean code")) {
-                System.out.println("№ " + i + " Книга: " + a[i].getBookTitle());
+    static public void printBookWithFilter(Book[] book, String nameFilterField) {
+        System.out.println("Массив книг (c фильтром по " + nameFilterField + "): " + book);
+        for (int i = 0; i < book.length; i++) {
+            if ("Clean code".equals(book[i].getBookTitle())) {
+                System.out.println("№ " + i + " Книга: " + book[i].getBookTitle());
             }
         }
     }
 
-    public void printBook(Book a) {
-        System.out.println("Название книги: " + a.getBookTitle() + "\n" + "Кол-во страниц: " + a.getCount());
+    public void printBook(Book book) {
+        System.out.println("Название книги: " + book.getBookTitle() + System.lineSeparator() + "Кол-во страниц: " + book.getCount());
     }
 
-    static public void printBook(Book[] a) {
-        System.out.println("Массив книг: " + a);
-        for (int i = 0; i < a.length; i++) {
-            System.out.println("№ " + i + " Книга: " + a[i].getBookTitle());
+    static public void printBook(Book[] book) {
+        System.out.println("Массив книг: " + book);
+        for (int i = 0; i < book.length; i++) {
+            System.out.println("№ " + i + " Книга: " + book[i].getBookTitle());
         }
     }
 
-    static public Book[] rearrangementOf2ElementsArrayBook(Book[] a, int x, int y) {
-        Book bookTemp = a[x];
-        a[x] = a[y];
-        a[y] = bookTemp;
-        return a;
+    static public Book[] rearrangementOf2ElementsArrayBook(Book[] book, int x, int y) {
+        Book bookTemp = book[x];
+        book[x] = book[y];
+        book[y] = bookTemp;
+        return book;
     }
 
 }

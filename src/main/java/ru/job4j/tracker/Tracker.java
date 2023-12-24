@@ -33,12 +33,12 @@ public class Tracker {
     }
 
     public Item[] findByName(String key) {
-        Item[] result = new Item[findAll().length];
+        Item[] result = new Item[size];
         int sizeFindAll = 0;
-        for (int i = 0; i < findAll().length; i++) {
-            Item toChekFor = items[i];
-            if (toChekFor.getName().equals(key)) {
-                result[i] = findAll()[i];
+        for (int count = 0; count < size; count++) {
+            Item item = items[count];
+            if (item.getName().equals(key)) {
+                result[count] = item;
                 sizeFindAll++;
             }
         }

@@ -30,7 +30,7 @@ public class StartUI {
                 String name = scanner.nextLine();
                 Item item = new Item(name);
                 tracker.add(item);
-                System.out.println("Добавленная заявка: " + item + "\n");
+                System.out.println("Добавленная заявка: " + item + System.lineSeparator());
             } else {
                 run = false;
             }

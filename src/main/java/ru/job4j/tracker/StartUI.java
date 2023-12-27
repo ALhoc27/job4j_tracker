@@ -11,22 +11,26 @@ public class StartUI {
             System.out.print("Выбрать: ");
             int select = Integer.parseInt(scanner.nextLine());
             if (select == 6) {
-                System.out.println("Пользователь выбрал: " + select + " (Завершить программу)" + System.lineSeparator());
+                System.out.println("Пользователь выбрал: " + select);
                 break;
             } else if (select == 5) {
-                System.out.println("Пользователь выбрал: " + select + " (Показать заявки по имени)" + System.lineSeparator());
+                System.out.println("Пользователь выбрал: " + select);
             } else if (select == 4) {
-                System.out.println("Пользователь выбрал: " + select + " (Показать заявку по id)" + System.lineSeparator());
+                System.out.println("Пользователь выбрал: " + select);
             } else if (select == 3) {
-                System.out.println("Пользователь выбрал: " + select + " (Удалить заявку)" + System.lineSeparator());
+                System.out.println("Пользователь выбрал: " + select);
             } else if (select == 2) {
-                System.out.println("Пользователь выбрал: " + select + " (Изменить заявку)" + System.lineSeparator());
+                System.out.println("Пользователь выбрал: " + select);
             } else if (select == 1) {
-                System.out.println("Пользователь выбрал: " + select + " (Показать все заявки)" + System.lineSeparator());
+                System.out.println("Пользователь выбрал: " + select);
+                System.out.println("=== Показать все заявки ===");
+                for (Item item: tracker.findAll()) {
+                    System.out.println(item);
+                }
             } else if (select == 0) {
-                System.out.print("Пользователь выбрал: " + select + " (Добавить новую заявку)" + System.lineSeparator());
+                System.out.print("Пользователь выбрал: " + select);
                 System.out.println("=== Создание новой заявки ===");
-                System.out.println("Введите имя: ");
+                System.out.print("Введите имя: ");
                 String name = scanner.nextLine();
                 Item item = new Item(name);
                 tracker.add(item);

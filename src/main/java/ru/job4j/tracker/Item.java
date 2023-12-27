@@ -48,12 +48,4 @@ public class Item {
                 + ", name= '" + name + '\''
                 + ", created= " + created.format(FORMATTER) + '}';
     }
-
-    public static void main(String[] args) {
-        int age = 12;
-        String name = "Alex";
-        System.out.println(String.format("Привет! Я %s, мой возраст: %s", name, age)); // Привет! Я Alex, мой возраст: 12
-        System.out.printf("Строка c форматированием: %.2f%n", 1000.0 / 3.0); // Строка c форматированием: 333,33
-    }
-
 }

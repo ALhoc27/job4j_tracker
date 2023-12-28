@@ -56,7 +56,7 @@ public class Tracker {
         return result;
     }
 
-    public boolean replace(int id, Item item) {
+        public boolean replace(int id, Item item) {
         int index = indexOf(id);
         boolean result = index != -1;
         if (result) {

@@ -21,15 +21,27 @@ public class StartUI {
                 System.out.println("Пользователь выбрал: " + select);
             } else if (select == 2) {
                 System.out.println("Пользователь выбрал: " + select);
+                System.out.println(" === Изменить заявку ===");
+                System.out.print("Введите id заявки(которую меняем): ");
+                int id = Integer.parseInt(scanner.nextLine());
+                System.out.print("Введите имя новой заявки: ");
+                String name = scanner.nextLine();
+                boolean result = tracker.replace(id, new Item(name));
+                if (result) {
+                    System.out.println("Заявка изменена успешно.");
+                } else {
+                    System.out.println("Заявка не изменена");
+                }
+
             } else if (select == 1) {
                 System.out.println("Пользователь выбрал: " + select);
-                System.out.println("=== Показать все заявки ===");
+                System.out.println(" (Показать все заявки)");
                 for (Item item: tracker.findAll()) {
                     System.out.println(item);
                 }
             } else if (select == 0) {
                 System.out.print("Пользователь выбрал: " + select);
-                System.out.println("=== Создание новой заявки ===");
+                System.out.println(" (Создание новой заявки)");
                 System.out.print("Введите имя: ");
                 String name = scanner.nextLine();
                 Item item = new Item(name);

@@ -15,6 +15,16 @@ public class StartUI {
                 break;
             } else if (select == 5) {
                 System.out.println("Пользователь выбрал: " + select);
+                System.out.print("Введите имя: ");
+                String name = scanner.nextLine();
+                Item[] items = tracker.findByName(name);
+                if (items.length > 0) {
+                    for (Item item : items) {
+                        System.out.println(item);
+                    }
+                } else {
+                    System.out.println("Заявки с именем: " + name + " не найдены.");
+                }
             } else if (select == 4) {
                 System.out.println("Пользователь выбрал: " + select);
                 System.out.print("Введите id заявки (которую хотим получить): ");

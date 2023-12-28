@@ -17,10 +17,18 @@ public class StartUI {
                 System.out.println("Пользователь выбрал: " + select);
             } else if (select == 4) {
                 System.out.println("Пользователь выбрал: " + select);
+                System.out.print("Введите id заявки (которую хотим получить): ");
+                int id = Integer.parseInt(scanner.nextLine());
+                Item item = tracker.findById(id);
+                if (item != null) {
+                    System.out.println(item);
+                } else {
+                    System.out.println("Заявка с введенным id: " + id + " не найдена.");
+                }
+                System.out.println("");
             } else if (select == 3) {
                 System.out.println("Пользователь выбрал: " + select);
-                System.out.println(" (Изменить заявку)");
-                System.out.print("Введите id заявки(которую удаляем): ");
+                System.out.print("Введите id заявки (которую хотим удаляем): ");
                 int id = Integer.parseInt(scanner.nextLine());
                 Item item = tracker.findById(id);
                 System.out.println(item);
@@ -38,6 +46,7 @@ public class StartUI {
                         System.out.print("Вы удаляете данную заявку? (1/0): ");
                     }
                 }
+                System.out.println("");
 
             } else if (select == 2) {
                 System.out.println("Пользователь выбрал: " + select);
@@ -52,13 +61,14 @@ public class StartUI {
                 } else {
                     System.out.println("Заявка не изменена");
                 }
-
+                System.out.println("");
             } else if (select == 1) {
                 System.out.println("Пользователь выбрал: " + select);
                 System.out.println(" (Показать все заявки)");
                 for (Item item: tracker.findAll()) {
                     System.out.println(item);
                 }
+                System.out.println("");
             } else if (select == 0) {
                 System.out.print("Пользователь выбрал: " + select);
                 System.out.println(" (Создание новой заявки)");
@@ -67,8 +77,6 @@ public class StartUI {
                 Item item = new Item(name);
                 tracker.add(item);
                 System.out.println("Добавленная заявка: " + item + System.lineSeparator());
-            } else {
-                run = false;
             }
         }
     }

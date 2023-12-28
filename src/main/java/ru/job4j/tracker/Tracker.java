@@ -20,16 +20,7 @@ public class Tracker {
     }
 
     public Item[] findAll() {
-        Item[] item = new Item[size];
-        int sizeFindAll = 0;
-        for (int i = 0; i < items.length; i++) {
-            Item toCheckForZero = items[i];
-            if (toCheckForZero != null) {
-                item[i] = toCheckForZero;
-                sizeFindAll++;
-            }
-        }
-        return Arrays.copyOf(item, sizeFindAll);
+        return Arrays.copyOf(items, size);
     }
 
     public Item[] findByName(String key) {

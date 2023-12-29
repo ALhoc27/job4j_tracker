@@ -24,6 +24,6 @@ public class SportCar implements Vehicle, Fuel {
 
     @Override
     public void refill() {
-
+        System.out.println("Заправка!");
     }
 }

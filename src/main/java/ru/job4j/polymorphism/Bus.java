@@ -1,15 +1,6 @@
 package ru.job4j.polymorphism;
 
 public class Bus implements Transport {
-    private double courseRubLitr = 40d;
-
-    public double getCourseRubLitr() {
-        return courseRubLitr;
-    }
-
-    public void setCourseRubLitr(double courseRubLitr) {
-        this.courseRubLitr = courseRubLitr;
-    }
 
     @Override
     public void drive() {
@@ -23,6 +14,6 @@ public class Bus implements Transport {
 
     @Override
     public double refuel(int quantitOfFuel) {
-        return quantitOfFuel * getCourseRubLitr();
+        return quantitOfFuel * Vehicle.COURSELIBRUB;
     }
 }

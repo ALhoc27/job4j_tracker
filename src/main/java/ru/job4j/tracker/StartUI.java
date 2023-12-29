@@ -53,12 +53,14 @@ public class StartUI {
                     System.out.println("Заявка не изменена");
                 }
             } else if (select == 1) {
-                System.out.println("Пользователь выбрал: " + select);
-                System.out.println(" (Показать все заявки)");
-                for (Item item: tracker.findAll()) {
-                    System.out.println(item);
+                Item[] items = tracker.findAll();
+                if (items.length > 0) {
+                    for (Item item : items) {
+                        System.out.println(item);
+                    }
+                } else {
+                    System.out.println("Хранилище еще не содержит заявок");
                 }
-                System.out.println("");
             } else if (select == 0) {
                 System.out.println(" (Создание новой заявки)");
                 System.out.print("Введите имя: ");

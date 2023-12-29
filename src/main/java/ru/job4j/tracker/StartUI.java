@@ -12,7 +12,7 @@ public class StartUI {
             int select = Integer.parseInt(scanner.nextLine());
             if (select == 6) {
                 System.out.println("Пользователь выбрал: " + select);
-                break;
+                run = false;
             } else if (select == 5) {
                 System.out.println("Пользователь выбрал: " + select);
                 System.out.print("Введите имя: ");

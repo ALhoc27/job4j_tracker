@@ -36,25 +36,12 @@ public class StartUI {
                     System.out.println("Заявка с введенным id: " + id + " не найдена.");
                 }
             } else if (select == 3) {
-                System.out.println("Пользователь выбрал: " + select);
-                System.out.print("Введите id заявки (которую хотим удаляем): ");
+                System.out.println("=== Удаление заявки ===");
+                System.out.print("Введите id: ");
                 int id = Integer.parseInt(scanner.nextLine());
                 Item item = tracker.findById(id);
-                System.out.println(item);
-                System.out.print("Вы удаляете данную заявку? (1/0): ");
-                int del = -1;
-                while (del != 0 && del != 1) {
-                    del = Integer.parseInt(scanner.nextLine());
-                    if (del == 1) {
-                        tracker.delete(id);
-                        System.out.println(item != null ? "Заявка удалена успешно." : "Ошибка удаления заявки.");
-                    } else if (del == 0) {
-                        continue;
-                    } else {
-                        System.out.println("Не вверный ввод!");
-                        System.out.print("Вы удаляете данную заявку? (1/0): ");
-                    }
-                }
+                tracker.delete(id);
+                System.out.println(item != null ? "Заявка удалена успешно." : "Ошибка удаления заявки.");
             } else if (select == 2) {
                 System.out.println("Пользователь выбрал: " + select);
                 System.out.println(" (Изменить заявку)");

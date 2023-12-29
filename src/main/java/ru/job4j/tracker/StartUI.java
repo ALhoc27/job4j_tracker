@@ -35,7 +35,6 @@ public class StartUI {
                 } else {
                     System.out.println("Заявка с введенным id: " + id + " не найдена.");
                 }
-                System.out.println("");
             } else if (select == 3) {
                 System.out.println("Пользователь выбрал: " + select);
                 System.out.print("Введите id заявки (которую хотим удаляем): ");
@@ -56,8 +55,6 @@ public class StartUI {
                         System.out.print("Вы удаляете данную заявку? (1/0): ");
                     }
                 }
-                System.out.println("");
-
             } else if (select == 2) {
                 System.out.println("Пользователь выбрал: " + select);
                 System.out.println(" (Изменить заявку)");
@@ -71,7 +68,6 @@ public class StartUI {
                 } else {
                     System.out.println("Заявка не изменена");
                 }
-                System.out.println("");
             } else if (select == 1) {
                 System.out.println("Пользователь выбрал: " + select);
                 System.out.println(" (Показать все заявки)");

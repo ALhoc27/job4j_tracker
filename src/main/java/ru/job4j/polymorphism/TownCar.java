@@ -29,6 +29,5 @@ public class TownCar implements Vehicle, Fuel {
 
     @Override
     public void chargeBattery() {
-        Vehicle.super.chargeBattery();
     }
 }

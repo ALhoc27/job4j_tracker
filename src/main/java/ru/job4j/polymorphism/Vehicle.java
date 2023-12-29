@@ -10,4 +10,6 @@ public interface Vehicle extends Fuel {
     void steer();
 
     void changeGear();
+
+    void chargeBattery();
 }

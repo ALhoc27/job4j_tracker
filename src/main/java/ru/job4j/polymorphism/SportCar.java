@@ -8,6 +8,10 @@ public class SportCar implements Vehicle, Fuel {
     }
 
     @Override
+    public void chargeBattery() {
+    }
+
+    @Override
     public void accelerate() {
         System.out.println("Электронная педаль газа");
     }

@@ -2,7 +2,7 @@ package ru.job4j.tracker;
 
 import java.time.format.DateTimeFormatter;
 
-public class StartUI extends ConsoleInput {
+public class StartUI {
     public void init(Input input, Tracker tracker) {
         boolean run = true;
         while (run) {

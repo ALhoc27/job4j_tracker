@@ -80,7 +80,7 @@ public class StartUI {
 
     public static void createItem(Input input, Tracker tracker) {
         System.out.println(" (Создание новой заявки)");
-        String name =  input.askStr("Введите имя: ");
+        String name = input.askStr("Введите имя: ");
         Item item = new Item(name);
         tracker.add(item);
         System.out.println("Добавленная заявка: " + item + System.lineSeparator());

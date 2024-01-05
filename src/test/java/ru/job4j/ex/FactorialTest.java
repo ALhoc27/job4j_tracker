@@ -12,7 +12,7 @@ class FactorialTest {
         IllegalArgumentException exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> {
-                    Count.add(0, 3);
+                    Count.add(3, 1);
                 });
         assertThat(exception.getMessage()).isEqualTo("Start should be less than finish.");
     }

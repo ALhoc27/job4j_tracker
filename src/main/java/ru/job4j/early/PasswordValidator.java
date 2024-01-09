@@ -55,6 +55,9 @@ public class PasswordValidator {
                 hasSpecial = true;
             }
         }
+        if (hasUpCase && hasLowCase && hasDigit && hasSpecial) {
+            return password;
+        }
         if (!hasUpCase) {
             throw new IllegalArgumentException(
                     "Password should contain at least one uppercase letter"

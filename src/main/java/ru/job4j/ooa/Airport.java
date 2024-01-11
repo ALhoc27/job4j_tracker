@@ -1,6 +1,9 @@
 package ru.job4j.ooa;
 
+import java.util.Objects;
+
 public class Airport {
+    
     public static void main(String[] args) {
         Airbus airbus = new Airbus("A320");
         System.out.println(airbus);
@@ -12,5 +15,11 @@ public class Airport {
 
         airbus.setName("A380");
         System.out.println(airbus);
+
+        int[] array = new int[]{4, 3, 1, 5, 6, 4};
+
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(" " + array[i]);
+        }
     }
 }

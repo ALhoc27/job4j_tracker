@@ -5,21 +5,16 @@ import java.util.LinkedList;
 
 public class PriorityQueue {
     private LinkedList<Task> tasks = new LinkedList<>();
-    int index = 0;
 
     public void put(Task task) {
-        if (tasks.isEmpty()) {
-            tasks.add(task);
-            return;
-        }
+        int index = 0;
+
         for (Task element : tasks) {
-            if (element.getPriority() <= task.getPriority()) {
-                index++;
-            } else {
+            if (element.getPriority() > task.getPriority()) {
                 break;
             }
         }
-        tasks.add(index, task);
+        tasks.add(index++, task);
     }
 
     public Task take() {

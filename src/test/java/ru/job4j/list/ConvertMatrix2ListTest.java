@@ -22,4 +22,18 @@ class ConvertMatrix2ListTest {
         List<Integer> result = list.toList(input);
         assertThat(result).containsAll(expected);
     }
+    @Test
+    public void when3on3ArrayThenList4() {
+        ConvertMatrix2List list = new ConvertMatrix2List();
+        int[][] input = {
+                {1, 2},
+                {3, 4},
+                {43, 5, 3}
+        };
+        List<Integer> expected = Arrays.asList(
+                1, 2, 3, 4, 43, 5, 3
+        );
+        List<Integer> result = list.toList(input);
+        assertThat(result).containsAll(expected);
+    }
 }

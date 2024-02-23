@@ -15,10 +15,6 @@ public class Account {
         return requisite;
     }
 
-    public void setRequisite(String requisite) {
-        this.requisite = requisite;
-    }
-
     public double getBalance() {
         return balance;
     }

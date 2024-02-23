@@ -8,6 +8,7 @@ public class UsageMap {
     public static void main(String[] args) {
         Map<String, String> map = new HashMap<>();
         map.put("parsentev@yandex.ru", "Petr Arsentev");
+        map.put("parsentev@yandex.ru", "Petr A");
         map.put("alexbbtsk@yandex.ru", "Alexander Igorevich");
        /* Iterator<Map.Entry<String, String>> iterator = map.entrySet().iterator();
         while (iterator.hasNext()) {

@@ -19,8 +19,8 @@ public class BankService {
     public void addAccount(String passport, Account account) {
         User user = findByPassport(passport);
         boolean isAccount = false;
-        if (user != null) { // значит паспорт найден
-            List<Account> list = users.get(user); // список акаунтов
+        if (user != null) {
+            List<Account> list = users.get(user);
             if (list.isEmpty()) {
                 users.get(user).add(account);
                 isAccount = true;
